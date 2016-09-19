@@ -1,0 +1,8 @@
+#g++ -c -g -fstack-protector-all -Wstack-protector -fno-omit-frame-pointer AI_search_core_GL.c
+#g++ -c -g -fstack-protector-all -Wstack-protector -fno-omit-frame-pointer AI_search_sol.c
+#g++ -g -fstack-protector-all -Wstack-protector -fno-omit-frame-pointer *.o -lm -lglut -lGL -lGLU -lX11 -o AI_search
+
+g++ -c -g AI_search_core_GL.c
+g++ -c -g AI_search.c
+g++ -g *.o -lm -lglut -lGL -lGLU -lX11 -o AI_search
+

@@ -1,0 +1,312 @@
+CSC D84 - Artificial Intelligence
+
+Assignment 4 - Neural Networks for OCR
+
+This assignment is worth:
+
+10 AIUs (Artificial Intelligence Units)
+toward the 35% assignment component of your final
+mark.
+
+________________________________________________
+
+Student Name (last, first): Gong, Zheng
+
+Student number: 998948830
+
+UTORid: gongzhe1
+
+READ THIS AND SIGN YOUR NAME AT THE END:
+
+ I certify that I have read the UTSC code on academic
+honesty and plaguarism. All work submitted as part
+of this assignment is my own.
+
+	Signed: Zheng Gong
+
+
+(-5 marks for failing to provide the identifying
+ information requested above)
+________________________________________________
+
+Answer the following questions. Be concise and clear
+but explain carefully when needed.
+
+1 .- (1 marks) Train a 1-layer network using the Logistic activation
+               function. 
+
+       	Copy/paste the reported classification rates for:
+ 	
+       	Training data (last training round):
+
+       	**** After 1470000 iterations (250):
+		Digit 0, correct classification rate=0.946467
+		Digit 1, correct classification rate=0.974684
+		Digit 2, correct classification rate=0.819444
+		Digit 3, correct classification rate=0.841085
+		Digit 4, correct classification rate=0.902748
+		Digit 5, correct classification rate=0.748373
+		Digit 6, correct classification rate=0.960905
+		Digit 7, correct classification rate=0.878957
+		Digit 8, correct classification rate=0.794179
+		Digit 9, correct classification rate=0.812261
+		Average correct classification rate: 0.867910
+		Magnitude of largest network weight: 16.528211
+
+        Testing data:
+
+        Evaluating performance on test dataset... mode=0, units=0, sigmoid=0
+		Digit 0, correct classification rate=0.964286
+		Digit 1, correct classification rate=0.970044
+		Digit 2, correct classification rate=0.825581
+		Digit 3, correct classification rate=0.874257
+		Digit 4, correct classification rate=0.905295
+		Digit 5, correct classification rate=0.769058
+		Digit 6, correct classification rate=0.941545
+		Digit 7, correct classification rate=0.891051
+		Digit 8, correct classification rate=0.804928
+		Digit 9, correct classification rate=0.832507
+		Average correct classification rate: 0.877855
+
+
+2 .- (1 marks) Repeat the process using the hyperbolic tangent activatiob
+	       function.
+
+	    Training data:
+
+	    **** After 1340000 iterations (250):
+		Digit 0, correct classification rate=0.961538
+		Digit 1, correct classification rate=0.975000
+		Digit 2, correct classification rate=0.857143
+		Digit 3, correct classification rate=0.863905
+		Digit 4, correct classification rate=0.910506
+		Digit 5, correct classification rate=0.825000
+		Digit 6, correct classification rate=0.926380
+		Digit 7, correct classification rate=0.908560
+		Digit 8, correct classification rate=0.776805
+		Digit 9, correct classification rate=0.821721
+		Average correct classification rate: 0.882656
+		Magnitude of largest network weight: 24.546078
+
+		Testing data:
+
+		Evaluating performance on test dataset... mode=0, units=0, sigmoid=1
+		Digit 0, correct classification rate=0.971429
+		Digit 1, correct classification rate=0.971806
+		Digit 2, correct classification rate=0.843023
+		Digit 3, correct classification rate=0.891089
+		Digit 4, correct classification rate=0.920570
+		Digit 5, correct classification rate=0.798206
+		Digit 6, correct classification rate=0.924843
+		Digit 7, correct classification rate=0.887160
+		Digit 8, correct classification rate=0.816222
+		Digit 9, correct classification rate=0.831516
+		Average correct classification rate: 0.885586
+
+
+3 .- (1 marks) Which type of activation function yielded the best classification
+	       results? which one learned faster?
+
+	       The hyperbolic tangent function both yielded better results and learned faster by about 100000 iterations.
+
+4 .- (1 marks) Train a 2-layer network with hyperbolic-tangent activation, using
+	       150 hidden units. Report the classification rates on training and
+	       testing data just as for 1) and 2).
+
+	    Training data:
+
+	    **** After 320000 iterations (50):
+		Digit 0, correct classification rate=0.982571
+		Digit 1, correct classification rate=0.975881
+		Digit 2, correct classification rate=0.879518
+		Digit 3, correct classification rate=0.875717
+		Digit 4, correct classification rate=0.951120
+		Digit 5, correct classification rate=0.856522
+		Digit 6, correct classification rate=0.958015
+		Digit 7, correct classification rate=0.942910
+		Digit 8, correct classification rate=0.820833
+		Digit 9, correct classification rate=0.869565
+		Average correct classification rate: 0.911265
+		Largest hidden to output weight: 5.284597
+		Largest input to hidden weight: 8.151808
+
+		Testing data:
+
+		Evaluating performance on test dataset... mode=2, units=150, sigmoid=1
+		Digit 0, correct classification rate=0.962245
+		Digit 1, correct classification rate=0.959471
+		Digit 2, correct classification rate=0.838178
+		Digit 3, correct classification rate=0.867327
+		Digit 4, correct classification rate=0.941955
+		Digit 5, correct classification rate=0.837444
+		Digit 6, correct classification rate=0.935282
+		Digit 7, correct classification rate=0.892996
+		Digit 8, correct classification rate=0.794661
+		Digit 9, correct classification rate=0.809713
+		Average correct classification rate: 0.883927
+
+5 .- (1 marks) Same as 4), except use 10 hidden units instead
+
+		Training data:
+
+		**** After 320000 iterations (50):
+		Digit 0, correct classification rate=0.982571
+		Digit 1, correct classification rate=0.975881
+		Digit 2, correct classification rate=0.861446
+		Digit 3, correct classification rate=0.875717
+		Digit 4, correct classification rate=0.951120
+		Digit 5, correct classification rate=0.832609
+		Digit 6, correct classification rate=0.956107
+		Digit 7, correct classification rate=0.937385
+		Digit 8, correct classification rate=0.829167
+		Digit 9, correct classification rate=0.881988
+		Average correct classification rate: 0.908399
+		Largest hidden to output weight: 2.149107
+		Largest input to hidden weight: 1.480926
+
+		Testing data:
+
+		Evaluating performance on test dataset... mode=2, units=10, sigmoid=1
+		Digit 0, correct classification rate=0.962245
+		Digit 1, correct classification rate=0.962115
+		Digit 2, correct classification rate=0.826550
+		Digit 3, correct classification rate=0.855446
+		Digit 4, correct classification rate=0.942974
+		Digit 5, correct classification rate=0.829596
+		Digit 6, correct classification rate=0.936326
+		Digit 7, correct classification rate=0.891051
+		Digit 8, correct classification rate=0.780287
+		Digit 9, correct classification rate=0.812686
+		Average correct classification rate: 0.879927
+
+6 .- (1 marks) Same as 5), except use 3 hidden units instead
+
+		Training data:
+
+		**** After 290000 iterations (50):
+		Digit 0, correct classification rate=0.982143
+		Digit 1, correct classification rate=0.991150
+		Digit 2, correct classification rate=0.128458
+		Digit 3, correct classification rate=0.125000
+		Digit 4, correct classification rate=0.078740
+		Digit 5, correct classification rate=0.076759
+		Digit 6, correct classification rate=0.956332
+		Digit 7, correct classification rate=0.923221
+		Digit 8, correct classification rate=0.070103
+		Digit 9, correct classification rate=0.403727
+		Average correct classification rate: 0.473563
+		Largest hidden to output weight: 1.386713
+		Largest input to hidden weight: 0.499956
+
+		Testing data:
+
+		Evaluating performance on test dataset... mode=2, units=3, sigmoid=1
+		Digit 0, correct classification rate=0.985714
+		Digit 1, correct classification rate=0.987665
+		Digit 2, correct classification rate=0.000000
+		Digit 3, correct classification rate=0.000000
+		Digit 4, correct classification rate=0.434827
+		Digit 5, correct classification rate=0.000000
+		Digit 6, correct classification rate=0.936326
+		Digit 7, correct classification rate=0.915370
+		Digit 8, correct classification rate=0.000000
+		Digit 9, correct classification rate=0.174430
+		Average correct classification rate: 0.443433
+
+
+7 .- (4 marks) Comment on the experiments in 4, 5, and 6, and give your conclusion
+	       regarding the effect of the number of hidden units on classification
+	       accuracy.  
+
+	       What is the network with 3 hidden telling you about this classification
+	       problem?
+
+	       As the number of hidden units increase so too does the classification accuracy. 3 hidden units is far too few for this classification problem since there are more digits than there are hidden units.
+
+8 .- (5 marks) Train the best performing network you can. Use any activation function
+	       you wish, and set the number of hidden units so as to achieve the best
+	       performance.
+
+	    Number of hidden units used: 15
+
+	    Classification rate on testing data: 
+
+	    Evaluating performance on test dataset... mode=2, units=15, sigmoid=1
+		Digit 0, correct classification rate=0.978571
+		Digit 1, correct classification rate=0.965639
+		Digit 2, correct classification rate=0.811047
+		Digit 3, correct classification rate=0.886139
+		Digit 4, correct classification rate=0.916497
+		Digit 5, correct classification rate=0.816143
+		Digit 6, correct classification rate=0.930063
+		Digit 7, correct classification rate=0.887160
+		Digit 8, correct classification rate=0.810062
+		Digit 9, correct classification rate=0.838454
+		Average correct classification rate: 0.883977
+
+
+9 .- (5 marks) Describe how you would build a network to play the cat
+	        and mouse game (move the mouse to help it survive).
+
+		- Describe what the input is in terms of a vector of
+		  values
+		- Describe what the output layer looks like (how many
+		  neurons and what they encode)
+		- Describe the error function
+		- How many layers should you use?
+
+		The vector would be a list of features based on how favorable the current board state is to the mouse.
+		
+		The output layer would be 4 neurons that describe how desirable it is for the mouse to move towards that particular direction (up, down, left, or right).
+		
+		The error function would calculate the difference between how favorable the board is after the move and how favorable the neural net thought the move would be.
+
+		We would need two layers, one for the input layer and one for the output layer. There is no need for any hidden layers since this can be done with reinforcement learning, which is what a no-hidden-layer NN would be doing anyways.
+
+_____________________________________________________
+
+Mark with an 'x' where appropriate. If something is only
+working partially, briefly describe what works, what
+doesn't work, or what problems exist.
+	
+        	Complete/Working	Partial		Not done
+
+Logistic		X
+ activation
+
+1L Feed-forward X
+
+1L Backprop		X
+
+1L Classify		X
+
+2L Feed-forward	X
+
+2L Backprop		X
+
+2L Classify		X
+_____________________________________________________
+
+Marking:
+
+(2 marks) Sigmoid activation function
+
+(6 marks) Feed forward 1 layer
+
+(10 marks) Backprop 1 layer
+
+(2 marks) Classify 1 layer
+
+(6 marks) Feed forward 2 layers
+
+(14 marks) Backprop 2 layers
+
+(4 marks) Classify 2 layers
+
+(6 marks) Can train 2-layer networks with either activation function
+	  and any number of hidden units
+
+(20 marks) Answers in this report
+
+Total for A4:       / out of 70
+

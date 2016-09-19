@@ -1,0 +1,108 @@
+CSC D84 - Artificial Intelligence
+
+Assignment 5 - Decision Trees for OCR
+
+This assignment is worth:
+
+10 AIUs (Artificial Intelligence Units)
+toward the 35% assignment component of your final
+mark.
+
+________________________________________________
+
+Student Name (last, first): Gong, Zheng
+
+Student number: 998948830
+
+UTORid: gongzhe1
+
+READ THIS AND SIGN YOUR NAME AT THE END:
+
+ I certify that I have read the UTSC code on academic
+honesty and plaguarism. All work submitted as part
+of this assignment is my own.
+
+	Signed: Zheng Gong
+
+
+(-5 marks for failing to provide the identifying
+ information requested above)
+________________________________________________
+
+Answer the following questions. Be concise and clear
+but explain carefully when needed.
+
+1 .- (5 marks) Describe briefly the different ways you researched for
+	       measuring dissimilarity between probability distributions.
+
+	       Considered some in class notes regarding norm calculation for similarity functions as well as online research into entropy calculations.
+
+
+2 .- (2.5 marks) Describe the method you used to select a test for each
+  	         node of a decision tree. Even if you used standard
+	         'reduction of uncertainty', explain what other things
+	         you tried and why did you choose to stay with your 
+	         final setup.
+
+	         It is currently using the difference between the distribution vectors of the left and right split, calculuated using the 2-norm. Tried to implement some sort of entropy calculation but decided against using it because the calculation became overly complicated and was not working.
+
+3 .- Report the per/class classification rates for 
+
+	Tree levels    :	4	7	4	7	4	7	4	7
+	Number of trees:	10		50		100		150
+
+     
+4 .- Report the overall classification rates for
+
+	Tree levels    :	4	7	4	7	4	7	4	7
+	Number of trees:	10		50		100		150
+
+
+5 .- (2.5 marks) Based on the above. Are deeper trees better or worse
+		 at solving this task? should you keep adding levels to
+		 the trees?
+
+		 I do not have practical data to back this up, but I think with proper tests it's not neccessary for trees to be deeper for better accuracy. We saw an issue with overfitting already where trees became overly complex and actually lost accuracy.
+
+6 .- (2.5 marks) Based on the above. Are forests with more trees better?
+		 should you keep adding trees to the forest?
+
+		 I do not have practical data to back this up, but I think with more trees the forests would be better up to a point. 
+
+7 .- (2.5 marks) What would have to change in your code if you were going to do
+		 classification of all letters/symbols/digits instead of just
+		 digits?
+
+		 I think the tests would likel have to change and also how similarity is calculuated would have to change.
+
+_____________________________________________________
+
+Mark with an 'x' where appropriate. If something is only
+working partially, briefly describe what works, what
+doesn't work, or what problems exist.
+	
+        	Complete/Working	Partial		Not done
+
+test_pixels.m 		X
+
+trainRandomizedDT.m 			 X
+
+classifyData.m 					 X
+
+trainRandomizedDT and classifyData are both doing things but I am unable to tell which one of them is breaking (or if both are breaking). classifyData only ever classifies a single block for some reason and I can't figure out why. They are training and classifying respectively but just not correctly.
+
+_____________________________________________________
+
+Marking:
+
+(10 marks) Tests in test_pixels.m (TA assigned based on how
+	   reasonable/good/thorough your tests look)
+
+(10 marks) classifyData.m works
+
+(15 marks) trainRandomizedDT.m produces working decision trees
+
+(15 marks) Answers in this report
+
+Total for A6:       / out of 50
+
